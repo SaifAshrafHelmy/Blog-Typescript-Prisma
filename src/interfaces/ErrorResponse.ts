@@ -1,4 +1,4 @@
 export default interface {
-  message: string
+  error: string
   stack?: string
 }
