@@ -2,6 +2,7 @@ import express from 'express';
 import * as dotenv from 'dotenv';
 import MessageResponse from './interfaces/MessageResponse.js';
 import api from './api/index.js';
+import * as middlewares from './middlewares.js';
 dotenv.config();
 
 const app = express();
@@ -12,6 +13,9 @@ app.get<{}, MessageResponse>('/', (req, res) => {
 });
 
 app.use('/api/v1', api);
+
+app.use(middlewares.notFoundHandler);
+app.use(middlewares.errorHandler);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
