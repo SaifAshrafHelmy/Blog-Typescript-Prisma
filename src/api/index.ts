@@ -7,14 +7,14 @@ import { authenticateUser } from '../middlewares.js';
 const router = express.Router();
 
 router.get<{}, MessageResponse>('/', (req, res) => {
-  res.json({ message: "You're inside the API" });
+    res.json({ message: "You're inside the API" });
 });
 
 router.use('/users', usersRouter);
 router.use('/posts', postsRouter);
 
 router.get('/secret', authenticateUser, (req, res) => {
-  res.json({ message: 'You have access', user: req.session.user });
+    res.json({ message: 'You have access', user: req.session.user });
 });
 
 export default router;
