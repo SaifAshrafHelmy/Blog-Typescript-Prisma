@@ -13,8 +13,4 @@ router.get<{}, MessageResponse>('/', (req, res) => {
 router.use('/users', usersRouter);
 router.use('/posts', postsRouter);
 
-router.get('/secret', authenticateUser, (req, res) => {
-    res.json({ message: 'You have access', user: req.session.user });
-});
-
 export default router;
