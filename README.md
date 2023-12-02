@@ -16,21 +16,25 @@ http://localhost:5000/api/v1
 -   **Endpoint:** `/users/register`
 -   **Method:** `POST`
 -   **Request Body:**
+    ```json
     {
-    "email": "saif2023@gmail.com",
-    "password": "123123123",
-    "name": "Saif"
+        "email": "john.doe@example.com",
+        "password": "SecurePassword123",
+        "name": "John Doe"
     }
+    ```
 
 ### Login
 
 -   **Endpoint:** `/users/login`
 -   **Method:** `POST`
 -   **Request Body:**
+    ```json
     {
-    "email": "saif2023@gmail.com",
-    "password": "123123123"
+        "email": "john.doe@example.com",
+        "password": "SecurePassword123"
     }
+    ```
 
 ### Logout
 
@@ -46,23 +50,24 @@ http://localhost:5000/api/v1
 -   **Method:** `POST`
 -   **Authentication:** No authentication required
 -   **Request Body:**
+    ```json
     {
-    "title": "the waffle",
-    "content": "this waffe is my favourite banana ever!"
+        "title": "Best Practices in Software Development",
+        "content": "Explore the latest trends and best practices in software development."
     }
--   **Response:** (No specific response provided in the collection)
+    ```
 
 ### Update a Post
 
 -   **Endpoint:** `/posts/10` (Replace 10 with the actual post ID)
 -   **Method:** `PATCH`
 -   **Request Body:**
+    ```json
     {
-    "title": "the greatest waffle everrrr!!",
-    "content": "That's a good waffle!",
-    "id": 15
+        "title": "Effective Project Management Strategies",
+        "content": "Learn about proven project management strategies for successful outcomes."
     }
--   **Response:** (No specific response provided in the collection)
+    ```
 
 ### Delete a Post
 
@@ -79,9 +84,8 @@ http://localhost:5000/api/v1
     -   `limit` (disabled)
     -   `offset` (disabled)
     -   `search` (disabled)
--   **Response:** (No specific response provided in the collection)
 
-### Get User Posts
+### Get Current User Posts
 
 -   **Endpoint:** `/posts/mine`
 -   **Method:** `GET`
@@ -89,17 +93,11 @@ http://localhost:5000/api/v1
     -   `limit` (disabled)
     -   `offset` (disabled)
     -   `search` (disabled)
--   **Response:** (No specific response provided in the collection)
 
 ### Get Single Post
 
 -   **Endpoint:** `/posts/10` (Replace 10 with the actual post ID)
 -   **Method:** `GET`
--   **Response:** (No specific response provided in the collection)
-
-## Events
-
-The collection includes two events, one for the prerequest and another for the test phase. Currently, no scripts are provided for these events.
 
 ## Variables
 
